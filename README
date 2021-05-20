@@ -1,1 +1,21 @@
 calc, a simple infix calculator
+Using my own implementation of a dynamic vector, stack and queue I implemented Dijkstra's Shunting Yard Algorithm.
+By first organizing the user input as a string into tokens seperated into numbers or operators, I then use the algorithm
+to reorganize the infix notation to postfix notation and then evaluate it with a stack.
+
+Compiling
+	On Linux machines or Windows with make and g++ installed simply type "make" in the command line
+
+	If make is unavailble (g++ is required) type "g++ -o calc calc.cpp" in the command line
+
+Usage
+	The calculator currently only supports the operators +,-,* and / as well as brackets ()
+	Error detection is implemented
+	The syntax is explicit, so multiplication must include the * operator
+	No spaces
+	Entering a decimal will treat the number as a double
+	Negative numbers can be entered with brackets eg. (-5) is interpreted as -5
+
+	Example: (-5)*4-10/(-2)+16 = 1
+
+	Type "exit" as the expression to end the program
